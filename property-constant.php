@@ -17,6 +17,7 @@ public function pajak(){
 public function total(){
     return $this->harga + ($this->harga * self::PAJAK);
 }
+
 }
     
 //object
