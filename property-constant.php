@@ -9,7 +9,14 @@ public float $harga;
 public int $stok;
 
 //Constant
-public const PAJAK = 0.11;  
+public const PAJAK = 0.11;
+
+public function __construct() {
+    $this->kode = $kode;
+    $this->nama = $nama;
+    $this->harga = $harga;
+    $this->stok = $stok;
+}
 
 public function pajak(){
     return self ::PAJAK * 100;
@@ -21,7 +28,7 @@ public function total(){
 }
     
 //object
-$produk = new produk();
+$produk = new produk('P0001','laptop',1000000,5);
 
 $produk->kode = 'P0001';
 $produk->nama = 'laptop';
